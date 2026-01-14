@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Word Join Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- TITLE OUTSIDE CARD -->
+  <h1 class="game-title">🧠 Word Join Game</h1>
+
+  <!-- SCORE OUTSIDE CARD -->
+  <div id="scoreBoard" class="hidden">
+    Score: <span id="scoreValue">0</span>
+  </div>
+
+  <!-- CATEGORY PAGE -->
+  <div class="screen" id="categoryScreen">
+    <h2>📂 Select a Category</h2>
+    <button onclick="startGame('fruits')">🍎 Fruits</button>
+    <button onclick="startGame('animals')">🐶 Animals</button>
+    <button onclick="startGame('cities')">🌍 Famous Cities</button>
+    <button onclick="startGame('states')">🗺️ States</button>
+    <button onclick="startGame('brands')">🏷️ Brand Names</button>
+    <button onclick="startGame('tourist')">🏖️ Tourist Places</button>
+  </div>
+
+  <!-- QUESTION PAGE -->
+  <div class="screen hidden" id="gameScreen">
+    <h2 id="categoryTitle"></h2>
+    <div id="emoji">🧩</div>
+    <div id="word"><span id="startWord"></span><span class="blank"> ___</span></div>
+    <div id="options"></div>
+    <div id="message"></div>
+  </div>
+
+  <!-- OUTSIDE CONTROLS -->
+  <div class="controls hidden" id="controls">
+    <button onclick="restartGame()">🔄 Restart</button>
+    <button onclick="goHome()">🏠 Home</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
